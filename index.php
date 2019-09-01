@@ -60,7 +60,7 @@ session_start();
   
   
   </form>
-
+<!--if you post list statement using super globals-->
   <?php
 if($_POST){
     $any = $_POST['list'];
@@ -74,3 +74,20 @@ if($_POST){
 displaylist();
     
 }
+
+// this function populate the  $_SESSION//
+$time = time();    
+function displaylist(){
+ $time = time();
+ //$date = date('Y-m-d',$item);
+
+ 
+  echo "<ul>";
+  foreach($_SESSION['items'] as $item){
+      echo "<li id=\"do\">".$item."</li><br>";
+  };
+  echo "</ul>";
+  
+}
+
+
