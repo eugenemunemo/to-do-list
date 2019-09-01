@@ -33,3 +33,22 @@
   <link href="css/grayscale.min.css" rel="stylesheet">
 
 </head>
+
+<body>
+<div id="myDIV" class="header">
+  
+  <div class="app">
+   <h1>My To Do List</h1>
+    
+  <form method="POST" action="index.php">
+      
+  <input type="text" name="list">
+      
+  <input type="submit" value="Add List">
+
+  <span onclick="newElement()" class="addBtn"></span>
+  </div>
+  </div>
+  
+  
+  </form>
