@@ -60,3 +60,17 @@ session_start();
   
   
   </form>
+
+  <?php
+if($_POST){
+    $any = $_POST['list'];
+    if(isset($_SESSION['items'])){
+        $_SESSION['items'][] = $any;
+        
+    }else{
+        $_SESSION['items'] = [];
+    }
+
+displaylist();
+    
+}
