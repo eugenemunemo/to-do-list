@@ -44,17 +44,22 @@ session_start();
 
 <body>
 
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+<div class="header1">
+  <h2>Plan Your Day Accordingly</h2>
+  <p>your day should have no regrets plan it, to do list it.</p>
 </div>
 
+
+<div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Contact</a>
+</div>
+<div class="content">
 <div id="myDIV" class="header">
   
   <div class="app">
-   <h1>My To Do List</h1>
+   <h1>PLAN: To Do List</h1>
     
   <form method="POST" action="index.php">
       
