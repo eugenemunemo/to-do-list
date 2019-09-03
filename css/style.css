@@ -1,4 +1,45 @@
-input[type='text']{
+.form-control {
+  display: inline-block;
+  }
+
+.add_button {
+  margin: 10px 0px 10px 0px;
+  }
+
+.checkbox {
+  margin-top: 20px;
+  }
+
+.completed_item {
+  text-decoration: line-through;
+  }
+
+h1 {    
+  display: inline-block;
+  color: #292b33;
+  }
+
+body {    
+background-color: #f6f6f6;
+  }
+
+.text_holder {
+  display: block;
+  max-width: 100%;
+  word-wrap: break-word;
+  }
+
+
+#main {
+  margin-top: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 50%;
+  border: 1px solid #545454;
+  }
+
+
+/*input[type='text']{
     padding: 5px 6%;
     border-radius: 3px;
     font-size: 1.5em;
@@ -10,7 +51,7 @@ input[type='submit']{
    font-size: 1.5em;
    border-radius: 3px;
 }
-/*
+
 body{
     font-family: Nunito;
     background-image: url(../image/wallp.jpg);
@@ -72,14 +113,15 @@ ul{
   /* Style the list items */
 
 /*TOP NAVBAR*/
-body {
+*body {
   margin: 0;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
+  min-width: 250px;
 }
 
 .header1 {
-  background-color: #f1f1f1;
+   background-color: #f1f1f1; 
   padding: 20px;
   text-align: center;
 }
@@ -130,7 +172,7 @@ body {font-family: "Open Sans"}
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+     background: #eee; 
     font-size: 18px;
     transition: 0.2s;
   
@@ -151,10 +193,12 @@ body {font-family: "Open Sans"}
     background: #ddd;
   }
   
+  
   /* When clicked on, add a background color and strike out text */
+  
   ul li.checked {
     background: #888;
-    color: #fff;
+     color: #fff; *
     text-decoration: line-through;
   }
   

@@ -4,8 +4,6 @@ session_start();
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,28 +17,12 @@ session_start();
   <title>WELCOME TO YOUR TO DO LIST</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
-   
-    <script src="jquery-3.3.1.min.js"></script>
-   
-    
-    <!-- Bootstrap core CSS -->
-    
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-  <!-- Bootstrap core CSS -->
- 
-
-  <!-- Custom fonts for this template -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <!-- Custom styles for this template -->
-  
-
-</head>
+  <script src="jquery-3.3.1.min.js"></script>
+  </head>
 
 <body>
 
@@ -49,37 +31,40 @@ session_start();
   <p>your day should have no regrets plan it, to do list it.</p>
 </div>
 
-
+<!--navbar-->
 <div id="navbar">
   <a class="active" href="javascript:void(0)">Home</a>
   <a href="javascript:void(0)">News</a>
   <a href="javascript:void(0)">Contact</a>
 </div>
-<div class="content">
-<div id="myDIV" class="header">
-  
-  <div class="app">
-   <h1>PLAN: To Do List</h1>
-    
-  <form method="POST" action="index.php">
-      
-  <input type="text" name="list">
-      
-  <input type="submit" value="Add List">
-
-  <span onclick="newElement()" class="addBtn"></span>
-  </div>
-  </div>
-  
-  
-  </form>
 
 
+  <div class="container" id="main">
+<h1>Essential To-Do List</h1>
 
-   
+<form role ="form" id="main_input_box">
+
+<label>
+
+<input type="text" class ="form-control" id="custom_textbox" name="Item" placeholder="What do you need to do?">
+
+<input type="submit" value="Add" class="btn btn-basic add_button">
+</label>
+
+</form>
+
+<form>
+
+<ol class="list-group list_of_items">
+
+</ol>
+</form>
+
+</div>
+
 <?php
 if($_POST){
-    $any = $_POST['list'];
+    $any = $_POST['Item'];
     if(isset($_SESSION['items'])){
         $_SESSION['items'][] = $any;
         
@@ -107,10 +92,13 @@ function displaylist(){
 
 
 
+
        
 ?>
+
+
     <!-- Subscribe Modal -->
-<div id="subscribe" class="w3-modal w3-animate-opacity">
+    <div id="subscribe" class="w3-modal w3-animate-opacity">
   <div class="w3-modal-content" style="padding:32px">
     <div class="w3-container w3-white">
       <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
@@ -130,13 +118,7 @@ function displaylist(){
 </body>
 
 </html>
-  
+</body>
 
-
-   
-    <script src="js/main.js"></script>
-
- 
+<script src="js/main.js"></script>
 </html>
-
-
