@@ -38,7 +38,7 @@ session_start();
   <a href="javascript:void(0)">Contact</a>
 </div>
 
-
+<!---creating the form-->
   <div class="container" id="main">
 <h1>Essential To-Do List</h1>
 
@@ -62,6 +62,8 @@ session_start();
 
 </div>
 
+
+<!--to isset and displaylist
 <?php
 if($_POST){
     $any = $_POST['Item'];
@@ -81,6 +83,8 @@ function displaylist(){
  $time = time();
  //$date = date('Y-m-d',$item);
 
+
+ //start the echo of unorderd list//
  
   echo "<ul>";
   foreach($_SESSION['items'] as $item){
@@ -97,7 +101,7 @@ function displaylist(){
 ?>
 
 
-    <!-- Subscribe Modal -->
+    <! Subscribe Modal -->
     <div id="subscribe" class="w3-modal w3-animate-opacity">
   <div class="w3-modal-content" style="padding:32px">
     <div class="w3-container w3-white">
